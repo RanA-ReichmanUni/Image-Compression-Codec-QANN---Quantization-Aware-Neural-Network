@@ -23,4 +23,4 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMA
 ## 4. Termination
 Any violation of these terms **immediately terminates** your rights under this license.
 
-For licensing inquiries, contact: [Your Email or Website]
+
