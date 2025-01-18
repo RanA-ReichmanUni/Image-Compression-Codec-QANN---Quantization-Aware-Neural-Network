@@ -15,6 +15,9 @@ Among other technologies, the model leverages the highly effective and widely ad
 In addition to the novel quantization methods used in the model, Brotli compression [9] is applied to the quantized latents to further enhance compression efficiency. Brotli, a highly effective lossless compression algorithm, combines LZ77, Huffman coding, and second-order context modeling to achieve some of the highest compression ratios available in general-purpose compression algorithms. By using Brotli, the model can maintain a higher pixel range diversity with reduced artifacts for a given bits-per-pixel (BPP) ratio. This allows the model to minimize data loss and preserve crucial image details while ensuring efficient compression. 
 
 [8] Kingma, D. P. (2014) Auto-Encoding Variational Bayes. International Conference on Learning Representations (ICLR).
+
 [9] Alakuijala, J. Google Research (2018). Brotli: A General-Purpose Data Compressor. 
+
 [10] Lee, J. (2021). DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks. 
+
 [11] Yamada, Y. (2022). Autoregressive Image Generation using Residual Quantization (RQ-VAE).
