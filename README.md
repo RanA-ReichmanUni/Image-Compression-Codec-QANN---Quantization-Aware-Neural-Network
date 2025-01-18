@@ -1,0 +1,20 @@
+# Image-Compression-Codec-QANN---Quantization-Aware-Neural-Network
+Image Compression Codec (QANN) - Quantization Aware Neural Network
+
+
+This model introduces a novel and comprehensive approach to image compression and reconstruction by integrating several advanced techniques that set it apart from the existing body of research. Unlike traditional methods that rely solely on convolutional neural networks (CNNs), variational autoencoders (VAEs), or more recent diffusion models, this model uniquely combines a U-Net architecture augmented with self-attention mechanisms, parameter embedding, skip connections, and residual learning to effectively correct artifacts introduced during the quantization process.
+
+The model implements a novel approach to image compression by employing fine precision loss control by a controlled reduction of the pixel range diversity—the number of distinct pixel values used within the full dynamic range. This reduction in pixel range diversity introduces specific, learnable patterns -quantization artifacts- that can be effectively recovered by an advanced neural network when it is conditioned on the level of pixel range diversity reduction applied. By being aware of the quantization parameter (through parameter embedding), the neural network can learn to significantly reverse the effects of reduced pixel diversity.
+
+By creating patterns that are more compressible due to reduced variability, the quantization process allows for more efficient storage and transmission of images.
+This approach serves as a proof of concept that fine precision loss control, through the reduction of pixel range diversity, can be effectively utilized in image compression and reconstruction tasks as it creates learnable patterns.
+
+The approach opens new possibilities in image compression by treating quantization artifacts as an integral part of the learning process, rather than as undesirable noise that needs to be mitigated. This method, thus, contrasts with traditional approaches, which often focus on reducing quantization errors, as seen in techniques like distribution-aware quantization or residual quantization [10][11].
+Among other technologies, the model leverages the highly effective and widely adopted Variational Autoencoder (VAE) [8] framework to compress images while preserving a crucial degree of fidelity. The use of VAEs allows the model to significantly reduce the size of the ground truth data while maintaining essential details. The primary goal of the model is to explore and implement a method that achieves even greater levels of compression. This involves reaching a low bits-per-pixel (BPP) ratio, while ensuring that key image quality metrics such as PSNR (Peak Signal-to-Noise Ratio) and SSIM (Structural Similarity Index Measure) are preserved at levels comparable to, or surpassing, existing state-of-the-art methods. This approach strikes a balance between high compression efficiency and the retention of perceptual image quality.
+
+In addition to the novel quantization methods used in the model, Brotli compression [9] is applied to the quantized latents to further enhance compression efficiency. Brotli, a highly effective lossless compression algorithm, combines LZ77, Huffman coding, and second-order context modeling to achieve some of the highest compression ratios available in general-purpose compression algorithms. By using Brotli, the model can maintain a higher pixel range diversity with reduced artifacts for a given bits-per-pixel (BPP) ratio. This allows the model to minimize data loss and preserve crucial image details while ensuring efficient compression. 
+
+[8] Kingma, D. P. (2014) Auto-Encoding Variational Bayes. International Conference on Learning Representations (ICLR).
+[9] Alakuijala, J. Google Research (2018). Brotli: A General-Purpose Data Compressor. 
+[10] Lee, J. (2021). DAQ: Channel-Wise Distribution-Aware Quantization for Deep Image Super-Resolution Networks. 
+[11] Yamada, Y. (2022). Autoregressive Image Generation using Residual Quantization (RQ-VAE).
